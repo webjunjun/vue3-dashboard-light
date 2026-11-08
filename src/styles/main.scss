@@ -1,0 +1,28 @@
+@import url(./base.css);
+
+// 使用本地字体
+@font-face {
+  font-family: 'YouSheBiaoTiHei';
+  src: url('../assets/fonts/YouSheBiaoTiHei.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  // 在字体下载过程中使用系统字体
+  font-display: swap;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+}
+
+#app {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
