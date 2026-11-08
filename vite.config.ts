@@ -16,6 +16,8 @@ export default defineConfig(({ mode }) => {
   console.log(env.VITE_APP_BASE_API)
 
   return {
+    // GitHub Pages 项目站点部署在子路径下，本地开发仍使用根路径
+    base: env.VITE_APP_PUBLIC_PATH || '/',
     plugins: [
       vue(),
       vueJsx(),

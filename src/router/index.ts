@@ -43,7 +43,8 @@ router.beforeEach(async (to, from, next) => {
   // 进度条开始
   start()
 
-  if (to.name === 'NotFound' || to.name === 'BlankView') {
+  // 404、重定向中间页以及大屏页无需登录即可访问
+  if (to.name === 'NotFound' || to.name === 'BlankView' || to.name === 'HomeView') {
     next()
     return
   }
